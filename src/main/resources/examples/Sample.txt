@@ -1,0 +1,145 @@
+{
+  "message": {
+    "subscriptionId": "926f2df0-a2cd-48ba-9e4c-4ea5e1ff0681",
+    "notificationId": 2,
+    "id": "da6bec94-68dc-4c51-93d2-6aaf8122175a",
+    "eventType": "workitem.updated",
+    "publisherId": "tfs",
+    "message": null,
+    "detailedMessage": null,
+    "resource": {
+      "id": 4,
+      "workItemId": 72145,
+      "rev": 4,
+      "revisedBy": {
+        "id": "3142f15c-438c-6536-9958-4d811220384d",
+        "name": "Nikhil Acharya <nikhil.acharya@packsize.com>",
+        "displayName": "Nikhil Acharya",
+        "url": "https://spsprodeus22.vssps.visualstudio.com/A9822312b-0e1b-4776-9852-0eb94b26cbfd/_apis/Identities/3142f15c-438c-6536-9958-4d811220384d",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/packsize/_apis/GraphProfile/MemberAvatars/aad.MzE0MmYxNWMtNDM4Yy03NTM2LTk5NTgtNGQ4MTEyMjAzODRk"
+          }
+        },
+        "uniqueName": "nikhil.acharya@packsize.com",
+        "imageUrl": "https://dev.azure.com/packsize/_apis/GraphProfile/MemberAvatars/aad.MzE0MmYxNWMtNDM4Yy03NTM2LTk5NTgtNGQ4MTEyMjAzODRk",
+        "descriptor": "aad.MzE0MmYxNWMtNDM4Yy03NTM2LTk5NTgtNGQ4MTEyMjAzODRk"
+      },
+      "revisedDate": "9999-01-01T00:00:00Z",
+      "fields": {
+        "System.Rev": {
+          "oldValue": 3,
+          "newValue": 4
+        },
+        "System.AuthorizedDate": {
+          "oldValue": "2024-11-05T08:56:20.52Z",
+          "newValue": "2024-11-05T08:56:31.403Z"
+        },
+        "System.RevisedDate": {
+          "oldValue": "2024-11-05T08:56:31.403Z",
+          "newValue": "9999-01-01T00:00:00Z"
+        },
+        "System.State": {
+          "oldValue": "Completed",
+          "newValue": "In Review"
+        },
+        "System.Reason": {
+          "oldValue": "Moved to state Completed",
+          "newValue": "Moved to state In Review"
+        },
+        "System.ChangedDate": {
+          "oldValue": "2024-11-05T08:56:20.52Z",
+          "newValue": "2024-11-05T08:56:31.403Z"
+        },
+        "System.Watermark": {
+          "oldValue": 377215,
+          "newValue": 377216
+        },
+        "Microsoft.VSTS.Common.ClosedDate": {
+          "oldValue": "2024-11-05T08:34:53.553Z"
+        },
+        "Microsoft.VSTS.Common.ClosedBy": {
+          "oldValue": "Nikhil Acharya <nikhil.acharya@packsize.com>"
+        },
+        "Microsoft.VSTS.Common.StateChangeDate": {
+          "oldValue": "2024-11-05T08:34:53.553Z",
+          "newValue": "2024-11-05T08:56:31.403Z"
+        },
+        "Microsoft.VSTS.Common.ActivatedDate": {
+          "newValue": "2024-11-05T08:56:31.403Z"
+        },
+        "Microsoft.VSTS.Common.ActivatedBy": {
+          "newValue": "Nikhil Acharya <nikhil.acharya@packsize.com>"
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145/updates/4"
+        },
+        "workItemUpdates": {
+          "href": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145/updates"
+        },
+        "parent": {
+          "href": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145"
+        },
+        "html": {
+          "href": "https://dev.azure.com/packsize/web/wi.aspx?pcguid=29784d26-5ac9-4146-909f-c142590bc417&id=72145"
+        }
+      },
+      "url": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145/updates/4",
+      "revision": {
+        "id": 72145,
+        "rev": 4,
+        "fields": {
+          "System.AreaPath": "Global_IS_Salesforce_2\\Salesforce (Nepal)",
+          "System.TeamProject": "Global_IS_Salesforce_2",
+          "System.IterationPath": "Global_IS_Salesforce_2\\Nepal\\Sprint 5 - Oct 28th, 2024",
+          "System.WorkItemType": "Fresh Desk",
+          "System.State": "In Review",
+          "System.Reason": "Moved to state In Review",
+          "System.CreatedDate": "2024-11-05T08:34:24.41Z",
+          "System.CreatedBy": "Nikhil Acharya <nikhil.acharya@packsize.com>",
+          "System.ChangedDate": "2024-11-05T08:56:31.403Z",
+          "System.ChangedBy": "Nikhil Acharya <nikhil.acharya@packsize.com>",
+          "System.CommentCount": 0,
+          "System.Title": "Test ADO-FD Integration",
+          "Microsoft.VSTS.Common.StateChangeDate": "2024-11-05T08:56:31.403Z",
+          "Microsoft.VSTS.Common.ActivatedDate": "2024-11-05T08:56:31.403Z",
+          "Microsoft.VSTS.Common.ActivatedBy": "Nikhil Acharya <nikhil.acharya@packsize.com>",
+          "Custom.FreshdeskTicketNumber": "9870",
+          "Custom.TicketURL": "https://packsize.freshdesk.com/a/tickets/9870",
+          "Custom.System": "Salesforce",
+          "Custom.ISType": "Request"
+        },
+        "_links": {
+          "self": {
+            "href": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145/revisions/4"
+          },
+          "workItemRevisions": {
+            "href": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145/revisions"
+          },
+          "parent": {
+            "href": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145"
+          }
+        },
+        "url": "https://dev.azure.com/packsize/695472af-390f-4486-b4c3-7de5c0ce4eda/_apis/wit/workItems/72145/revisions/4"
+      }
+    },
+    "resourceVersion": "1.0",
+    "resourceContainers": {
+      "collection": {
+        "id": "29784d26-5ac9-4146-909f-c142590bc417",
+        "baseUrl": "https://dev.azure.com/packsize/"
+      },
+      "account": {
+        "id": "9822312b-0e1b-4776-9852-0eb94b26cbfd",
+        "baseUrl": "https://dev.azure.com/packsize/"
+      },
+      "project": {
+        "id": "695472af-390f-4486-b4c3-7de5c0ce4eda",
+        "baseUrl": "https://dev.azure.com/packsize/"
+      }
+    },
+    "createdDate": "2024-11-05T08:56:37.9623808Z"
+  }
+}

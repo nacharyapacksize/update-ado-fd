@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="ado-fd" format="java">
+      <types:shape format="raml"><![CDATA[#%RAML 1.0 DataType
+type: string]]></types:shape>
+    </types:type>
+    <types:type name="ado-fd1" format="java">
+      <types:shape format="raml"><![CDATA[#%RAML 1.0 DataType
+type: string]]></types:shape>
+    </types:type>
+    <types:type name="sample" format="json">
+      <types:shape format="weave" example="examples/Sample-2.txt"><![CDATA[%dw 2.0
+
+type sample = {|
+  message: {|
+    subscriptionId: String, 
+    notificationId: Number {"typeId": "int"}, 
+    id: String, 
+    eventType: String, 
+    publisherId: String, 
+    message: Null, 
+    detailedMessage: Null, 
+    resource: {|
+      id: Number {"typeId": "int"}, 
+      workItemId: Number {"typeId": "int"}, 
+      rev: Number {"typeId": "int"}, 
+      revisedBy: {|
+        id: String, 
+        name: String, 
+        displayName: String, 
+        url: String, 
+        "_links": {| avatar: {| href: String |} |}, 
+        uniqueName: String, 
+        imageUrl: String, 
+        descriptor: String
+      |}, 
+      revisedDate: String, 
+      fields: {|
+        "System.Rev": {|
+          oldValue: Number {"typeId": "int"}, 
+          newValue: Number {"typeId": "int"}
+        |}, 
+        "System.AuthorizedDate": {|
+          oldValue: String, 
+          newValue: String
+        |}, 
+        "System.RevisedDate": {|
+          oldValue: String, 
+          newValue: String
+        |}, 
+        "System.State": {|
+          oldValue: String, 
+          newValue: String
+        |}, 
+        "System.Reason": {|
+          oldValue: String, 
+          newValue: String
+        |}, 
+        "System.ChangedDate": {|
+          oldValue: String, 
+          newValue: String
+        |}, 
+        "System.Watermark": {|
+          oldValue: Number {"typeId": "int"}, 
+          newValue: Number {"typeId": "int"}
+        |}, 
+        "Microsoft.VSTS.Common.ClosedDate": {| newValue: String |}, 
+        "Microsoft.VSTS.Common.ClosedBy": {| newValue: String |}, 
+        "Microsoft.VSTS.Common.StateChangeDate": {|
+          oldValue: String, 
+          newValue: String
+        |}
+      |}, 
+      "_links": {|
+        self: {| href: String |}, 
+        workItemUpdates: {| href: String |}, 
+        parent: {| href: String |}, 
+        html: {| href: String |}
+      |}, 
+      url: String, 
+      revision: {|
+        id: Number {"typeId": "int"}, 
+        rev: Number {"typeId": "int"}, 
+        fields: {|
+          "System.AreaPath": String, 
+          "System.TeamProject": String, 
+          "System.IterationPath": String, 
+          "System.WorkItemType": String, 
+          "System.State": String, 
+          "System.Reason": String, 
+          "System.AssignedTo": String, 
+          "System.CreatedDate": String, 
+          "System.CreatedBy": String, 
+          "System.ChangedDate": String, 
+          "System.ChangedBy": String, 
+          "System.CommentCount": Number {"typeId": "int"}, 
+          "System.Title": String, 
+          "Microsoft.VSTS.Common.ClosedDate": String, 
+          "Microsoft.VSTS.Common.ClosedBy": String, 
+          "Microsoft.VSTS.Common.StateChangeDate": String, 
+          "Microsoft.VSTS.Common.ActivatedDate": String, 
+          "Microsoft.VSTS.Common.ActivatedBy": String, 
+          "Microsoft.VSTS.Scheduling.TargetDate": String, 
+          "Microsoft.VSTS.Scheduling.StartDate": String, 
+          "Custom.FreshdeskTicketNumber": String, 
+          "Custom.TicketURL": String, 
+          "Custom.System": String, 
+          "Custom.ISType": String, 
+          "Custom.PacksizeDepartment": String, 
+          "System.Description": String
+        |}, 
+        "_links": {|
+          self: {| href: String |}, 
+          workItemRevisions: {| href: String |}, 
+          parent: {| href: String |}
+        |}, 
+        url: String
+      |}
+    |}, 
+    resourceVersion: String, 
+    resourceContainers: {|
+      collection: {|
+        id: String, 
+        baseUrl: String
+      |}, 
+      account: {|
+        id: String, 
+        baseUrl: String
+      |}, 
+      project: {|
+        id: String, 
+        baseUrl: String
+      |}
+    |}, 
+    createdDate: String
+  |}
+|} {"example": "{\\\"message\\\":{\\\"subscriptionId\\\":\\\"926f2df0-a2cd-48ba-9e4c-4ea5e1ff0681\\\",\\\"notificationId\\\":7,\\\"id\\\":\\\"0d4f85de-b489-46de-897c-70f23ef1d695\\\",\\\"eventType\\\":\\\"workitem.updated\\\",\\\"publisherId\\\":\\\"tfs\\\",\\\"message\\\":null,\\\"detailedMessage\\\":null,\\\"resource\\\":{\\\"id\\\":3,\\\"workItemId\\\":72258,\\\"rev\\\":3,\\\"revisedBy\\\":{\\\"id\\\":\\\"3142f15c-438c-6536-9958-4d811220384d\\\",\\\"name\\\":\\\"Nikhil Acharya <nikhil.acharya@packsize.com>\\\",\\\"displayName\\\":\\\"Nikhil Acharya\\\",\\\"url\\\":\\\"https:\\/\\/spsprodeus22.vssps.visualstudio.com\\/A9822312b-0e1b-4776-9852-0eb94b26cbfd\\/_apis\\/Identities\\/3142f15c-438c-6536-9958-4d811220384d\\\",\\\"_links\\\":{\\\"avatar\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/_apis\\/GraphProfile\\/MemberAvatars\\/aad.MzE0MmYxNWMtNDM4Yy03NTM2LTk5NTgtNGQ4MTEyMjAzODRk\\\"}},\\\"uniqueName\\\":\\\"nikhil.acharya@packsize.com\\\",\\\"imageUrl\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/_apis\\/GraphProfile\\/MemberAvatars\\/aad.MzE0MmYxNWMtNDM4Yy03NTM2LTk5NTgtNGQ4MTEyMjAzODRk\\\",\\\"descriptor\\\":\\\"aad.MzE0MmYxNWMtNDM4Yy03NTM2LTk5NTgtNGQ4MTEyMjAzODRk\\\"},\\\"revisedDate\\\":\\\"9999-01-01T00:00:00Z\\\",\\\"fields\\\":{\\\"System.Rev\\\":{\\\"oldValue\\\":2,\\\"newValue\\\":3},\\\"System.AuthorizedDate\\\":{\\\"oldValue\\\":\\\"2024-11-06T07:51:06.06Z\\\",\\\"newValue\\\":\\\"2024-11-06T08:16:58.88Z\\\"},\\\"System.RevisedDate\\\":{\\\"oldValue\\\":\\\"2024-11-06T08:16:58.88Z\\\",\\\"newValue\\\":\\\"9999-01-01T00:00:00Z\\\"},\\\"System.State\\\":{\\\"oldValue\\\":\\\"In Progress\\\",\\\"newValue\\\":\\\"Completed\\\"},\\\"System.Reason\\\":{\\\"oldValue\\\":\\\"Moved to state In Progress\\\",\\\"newValue\\\":\\\"Moved to state Completed\\\"},\\\"System.ChangedDate\\\":{\\\"oldValue\\\":\\\"2024-11-06T07:51:06.06Z\\\",\\\"newValue\\\":\\\"2024-11-06T08:16:58.88Z\\\"},\\\"System.Watermark\\\":{\\\"oldValue\\\":377861,\\\"newValue\\\":377869},\\\"Microsoft.VSTS.Common.ClosedDate\\\":{\\\"newValue\\\":\\\"2024-11-06T08:16:58.88Z\\\"},\\\"Microsoft.VSTS.Common.ClosedBy\\\":{\\\"newValue\\\":\\\"Nikhil Acharya <nikhil.acharya@packsize.com>\\\"},\\\"Microsoft.VSTS.Common.StateChangeDate\\\":{\\\"oldValue\\\":\\\"2024-11-06T07:51:06.06Z\\\",\\\"newValue\\\":\\\"2024-11-06T08:16:58.88Z\\\"}},\\\"_links\\\":{\\\"self\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\/updates\\/3\\\"},\\\"workItemUpdates\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\/updates\\\"},\\\"parent\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\\"},\\\"html\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/web\\/wi.aspx?pcguid=29784d26-5ac9-4146-909f-c142590bc417&id=72258\\\"}},\\\"url\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\/updates\\/3\\\",\\\"revision\\\":{\\\"id\\\":72258,\\\"rev\\\":3,\\\"fields\\\":{\\\"System.AreaPath\\\":\\\"Global_IS_Salesforce_2\\\\\\\\Salesforce (Nepal)\\\",\\\"System.TeamProject\\\":\\\"Global_IS_Salesforce_2\\\",\\\"System.IterationPath\\\":\\\"Global_IS_Salesforce_2\\\\\\\\Nepal\\\\\\\\Sprint 5 - Oct 28th, 2024\\\",\\\"System.WorkItemType\\\":\\\"Fresh Desk\\\",\\\"System.State\\\":\\\"Completed\\\",\\\"System.Reason\\\":\\\"Moved to state Completed\\\",\\\"System.AssignedTo\\\":\\\"Dheeraj Aragariya <Dheeraj.Aragariya@packsize.com>\\\",\\\"System.CreatedDate\\\":\\\"2024-11-06T07:49:53.503Z\\\",\\\"System.CreatedBy\\\":\\\"Nikhil Acharya <nikhil.acharya@packsize.com>\\\",\\\"System.ChangedDate\\\":\\\"2024-11-06T08:16:58.88Z\\\",\\\"System.ChangedBy\\\":\\\"Nikhil Acharya <nikhil.acharya@packsize.com>\\\",\\\"System.CommentCount\\\":0,\\\"System.Title\\\":\\\"Target Date Cast\\\",\\\"Microsoft.VSTS.Common.ClosedDate\\\":\\\"2024-11-06T08:16:58.88Z\\\",\\\"Microsoft.VSTS.Common.ClosedBy\\\":\\\"Nikhil Acharya <nikhil.acharya@packsize.com>\\\",\\\"Microsoft.VSTS.Common.StateChangeDate\\\":\\\"2024-11-06T08:16:58.88Z\\\",\\\"Microsoft.VSTS.Common.ActivatedDate\\\":\\\"2024-11-06T07:51:06.06Z\\\",\\\"Microsoft.VSTS.Common.ActivatedBy\\\":\\\"Nikhil Acharya <nikhil.acharya@packsize.com>\\\",\\\"Microsoft.VSTS.Scheduling.TargetDate\\\":\\\"2024-11-06T07:00:00Z\\\",\\\"Microsoft.VSTS.Scheduling.StartDate\\\":\\\"2024-11-06T07:51:04.787Z\\\",\\\"Custom.FreshdeskTicketNumber\\\":\\\"56789\\\",\\\"Custom.TicketURL\\\":\\\"https:\\/\\/packsize.freshdesk.com\\/a\\/tickets\\/56789\\\",\\\"Custom.System\\\":\\\"Salesforce\\\",\\\"Custom.ISType\\\":\\\"Request\\\",\\\"Custom.PacksizeDepartment\\\":\\\"IS\\\",\\\"System.Description\\\":\\\"<div>testing <\\/div>\\\"},\\\"_links\\\":{\\\"self\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\/revisions\\/3\\\"},\\\"workItemRevisions\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\/revisions\\\"},\\\"parent\\\":{\\\"href\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\\"}},\\\"url\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/695472af-390f-4486-b4c3-7de5c0ce4eda\\/_apis\\/wit\\/workItems\\/72258\\/revisions\\/3\\\"}},\\\"resourceVersion\\\":\\\"1.0\\\",\\\"resourceContainers\\\":{\\\"collection\\\":{\\\"id\\\":\\\"29784d26-5ac9-4146-909f-c142590bc417\\\",\\\"baseUrl\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/\\\"},\\\"account\\\":{\\\"id\\\":\\\"9822312b-0e1b-4776-9852-0eb94b26cbfd\\\",\\\"baseUrl\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/\\\"},\\\"project\\\":{\\\"id\\\":\\\"695472af-390f-4486-b4c3-7de5c0ce4eda\\\",\\\"baseUrl\\\":\\\"https:\\/\\/dev.azure.com\\/packsize\\/\\\"}},\\\"createdDate\\\":\\\"2024-11-06T08:17:05.2625902Z\\\"}}"}
+
+]]></types:shape>
+    </types:type>
+    <types:type name="ticket" format="json">
+      <types:shape format="weave" example="examples/tick.txt"><![CDATA[%dw 2.0
+
+type ticket = {|
+  "ticket.id": Number {"typeId": "int"}, 
+  "ticket.status": String
+|} {"example": "{\\\"ticket.id\\\":45678,\\\"ticket.status\\\":\\\"Done\\\"}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#97688acd-3a4e-40c7-a4a7-70d8becc0f2a">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="sample"/>
+        </types:message>
+      </types:input-event>
+      <types:output-event>
+        <types:message>
+          <types:payload type="ticket"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
